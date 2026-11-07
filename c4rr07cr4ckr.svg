@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15181b"/>
+      <stop offset="1" stop-color="#0a0c0d"/>
+    </linearGradient>
+    <linearGradient id="carrot" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff9a3d"/>
+      <stop offset="0.55" stop-color="#ff7a1a"/>
+      <stop offset="1" stop-color="#e05e08"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4dee8c"/>
+      <stop offset="1" stop-color="#1f9e56"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- background tile -->
+  <rect x="8" y="8" width="240" height="240" rx="44" fill="url(#bg)" stroke="#2a3037" stroke-width="2"/>
+
+  <!-- faint matrix scanlines -->
+  <g stroke="#37d67a" stroke-width="1" opacity="0.08">
+    <line x1="24" y1="70" x2="232" y2="70"/>
+    <line x1="24" y1="110" x2="232" y2="110"/>
+    <line x1="24" y1="150" x2="232" y2="150"/>
+    <line x1="24" y1="190" x2="232" y2="190"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <!-- leafy top -->
+    <g fill="url(#leaf)">
+      <path d="M128 66 C120 40 98 34 84 40 C104 46 112 62 122 82 Z"/>
+      <path d="M128 64 C128 34 128 24 128 22 C138 34 138 54 134 82 Z"/>
+      <path d="M128 66 C136 40 158 34 172 40 C152 46 144 62 134 82 Z"/>
+    </g>
+
+    <!-- carrot body -->
+    <path d="M108 78 L148 78 L134 200 C132 210 124 210 122 200 Z"
+          fill="url(#carrot)"/>
+    <!-- highlight -->
+    <path d="M114 82 L122 82 L118 180 Z" fill="#ffd9a8" opacity="0.35"/>
+
+    <!-- notch marks -->
+    <g stroke="#c24e06" stroke-width="3" stroke-linecap="round" opacity="0.75">
+      <line x1="114" y1="100" x2="142" y2="100"/>
+      <line x1="116" y1="124" x2="140" y2="124"/>
+      <line x1="118" y1="148" x2="138" y2="148"/>
+      <line x1="120" y1="172" x2="135" y2="172"/>
+    </g>
+  </g>
+
+  <!-- terminal prompt: hacker signal -->
+  <g font-family="monospace" font-weight="700">
+    <text x="176" y="214" font-size="26" fill="#37d67a">&gt;_</text>
+  </g>
+</svg>

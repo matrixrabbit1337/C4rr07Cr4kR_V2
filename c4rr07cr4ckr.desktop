@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=C4rr07CR4cKR
+GenericName=CTF Cracking Orchestrator
+Comment=Detect hashes/pcaps/archives, pick the right tool + wordlist, crack on GPU
+Exec=python3 /opt/c4rr07cr4ckr/c4rr07cr4ckr.py
+Icon=c4rr07cr4ckr
+Terminal=false
+Categories=Security;System;Utility;
+Keywords=hashcat;john;crack;ctf;hash;pcap;wifi;wpa;gpu;hashcrack;rabbit;
+StartupNotify=true
